@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1 Leiding
+  for leiding in leiding_list
+    p #{leiding.name} #{leiding.leeftijd} #{leiding.tak} 
+    img(src=leiding.afbeelding)
+  else
+    p Er zijn geen leiders.
