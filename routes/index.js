@@ -33,7 +33,4 @@ router.post('/gastenboek', gastenboek_controller.gastenboek_post);
 // POST request for leinding GET.
 router.get('/leiding', leiding_controller.leiding_get);
 
-// GET request for ajax groep GET.
-router.get('/ajax/:name', groep_controller.groep_ajax);
-
 module.exports = router;
