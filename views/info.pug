@@ -8,7 +8,25 @@ block content
         a(href=groep.url) #{groep.name} (#{groep.LTrange})
     else
       p Oops, er is iets misgelopen.
-	  
+      
+  each groep in groep_list   
+    button(type="button" onclick="loadDoc(groep)") Toon #{groep.name}
+    
+  div(class="showGroep")
+script.
+  function loadDoc(groep) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("demo").innerHTML =
+        this.responseText;
+      }
+    };
+    xhttp.open("GET", "/ajax_info/"+groep.name, true);
+    xhttp.send();
+  }
+  
+  
   h3 Vergaderingen
   p Elke zondag is er 'vergadering'. Dit is echter niet wat de gemiddelde scoutsleek zich voorstelt: een saaie bespreking rond een tafel met mensen die van verveling in slaap sukkelen. Het is eigenlijk zo'n beetje het tegendeel: allerlei spannende, boeiende en fantasieprikkelende activiteiten worden georganiseerd, natuurlijk aangepast aan de leeftijd van de tak.
 
