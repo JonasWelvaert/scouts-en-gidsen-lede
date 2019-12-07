@@ -103,23 +103,3 @@ exports.groep_detail = function(req, res) {
     });
 
 };
-
-// returns ajax html for a specific Groep.
-exports.groep_ajax = function(req, res) {
-    async.parallel({
-        groep: function(callback) {
-            Groep.find({ name: req.params.name})
-              .exec(callback)
-        },
-    }, function(err, results) {
-        if (err) { return next(err); } // Error in API usage.
-        if (results.groep==null) { // No results.
-            var err = new Error('Groep not found');
-            err.status = 404;
-            return next(err);
-        }
-        // Successful, so render.
-        res.render('groep_ajax', { groep: results.groep[0] } );
-    });
-
-};
