@@ -105,7 +105,7 @@ exports.groep_detail = function(req, res) {
 };
 
 // returns ajax html for a specific Groep.
-exports.groep_detail = function(req, res) {
+exports.groep_ajax = function(req, res) {
     async.parallel({
         groep: function(callback) {
             Groep.find({ name: req.params.name})
