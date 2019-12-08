@@ -96,3 +96,7 @@ div.leiding{
 div.leidingDiv{
   border:1px solid black;
 }
+th, td {
+  padding: 15px;
+  text-align: left;
+}
