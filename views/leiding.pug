@@ -10,21 +10,10 @@ block content
            th
              img(src=leiding.afbeelding)
            th
-             p Naam: #{leiding.name} 
+               Naam: #{leiding.name} 
                br
                |Leeftijd: #{leiding.leeftijd} 
                br
                |Tak: #{leiding.tak} 
-    else
-      p Er zijn geen leiders.
-  
-  h1 Leiding
-  div(class = 'leidingDiv')
-    for leiding in leiding_list
-      div(class = 'leiding')  
-        p 
-        img(src=leiding.afbeelding) 
-        br
-        |#{leiding.name} #{leiding.leeftijd} #{leiding.tak}        
     else
       p Er zijn geen leiders.
