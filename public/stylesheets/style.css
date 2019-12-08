@@ -30,7 +30,8 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-:1px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 nav ul li a {
@@ -95,6 +96,5 @@ div.leiding{
   border:1px solid black;
 }
 div.leidingDiv{
-  font-size: 20px;
   border:1px solid black;
 }
