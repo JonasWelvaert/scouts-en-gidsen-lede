@@ -5,8 +5,16 @@ block content
   div(class = 'leidingDiv')
     for leiding in leiding_list
       div(class = 'leiding') 
-        p #{leiding.name} #{leiding.leeftijd} #{leiding.tak} 
-        img(src=leiding.afbeelding)
+        table(style='width:100%')
+         tr
+           th
+             img(src=leiding.afbeelding)
+           th
+             p Naam: #{leiding.name} 
+               br
+               Leeftijd: #{leiding.leeftijd} 
+               br
+               Tak: #{leiding.tak} 
     else
       p Er zijn geen leiders.
   
