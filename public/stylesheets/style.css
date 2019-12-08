@@ -7,10 +7,10 @@ body {
   margin-left: auto;
   margin-right: auto;
   color: black;
-  border:2px solid black;
-
+  border-style: solid black;
+  border-top:2px;
+  border-bottom: 2px;
 }
-
 
 nav {
   background: #a0bd4b;
@@ -30,10 +30,9 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  border:1px solid black;
-
-
+  border-:1px solid black;
 }
+
 nav ul li a {
   text-decoration: none;
   color: #FFF;
@@ -42,9 +41,8 @@ nav ul li a {
   width: 100px;
   padding: 10px 5px;
   font-size:16px;
-
-
 }
+
 nav ul li a:hover {
   background-color: green;
   text-decoration: none;
@@ -93,10 +91,10 @@ div.bericht{
   padding-left: 5px;
 }
 div.leiding{
-	display: block;
-    border:1px solid black;
+  display: block;
+  border:1px solid black;
 }
 div.leidingDiv{
-	font-size: 20px;
-	border:1px solid black;
+  font-size: 20px;
+  border:1px solid black;
 }
