@@ -12,10 +12,10 @@ block content
       textarea#bericht.form-control(type='textarea', placeholder='Bericht' name='bericht' rows='3' required='true') #{undefined===gastenboek ? '' : gastenboek.bericht}
     div.form-group
       label(for='email') Email:
-      input#email.form-control(type='email' placeholder='Email' name='email' value=(undefined===gastenboek ? '' : gastenboek.email) )
+      input#email.form-control(type='email' placeholder='Email (optioneel)' name='email' value=(undefined===gastenboek ? '' : gastenboek.email) )
     div.form-group
       label(for='website') Website:
-      input#website.form-control(type='url' placeholder='http:// ' name='website' value=(undefined===gastenboek ? '' : gastenboek.website) )
+      input#website.form-control(type='url' placeholder='http:// (optioneel)' name='website' value=(undefined===gastenboek ? '' : gastenboek.website) )
     button.btn.btn-primary(type='submit') Toevoegen
   
   if errors 
